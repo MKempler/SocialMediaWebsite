@@ -13,3 +13,5 @@ response.writeHead(200, {
 response.end('Hello World\n');
 }).listen(1337);
 console.log('Server running on port 1337!');
+
+app.use(express.static('client/public'));
