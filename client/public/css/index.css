@@ -1,0 +1,130 @@
+.view-all-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.featured-posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.post-box {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    box-sizing: border-box;
+}
+form {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 20px;
+}
+form label, form textarea, form button {
+margin: 10px;
+font-size: 1.2em;
+font-weight: bold;
+}
+form textarea {
+width: 80%;
+height: 100px;
+resize: none;
+font-size: 1.2em;
+}
+form button {
+background-color: #007bff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+}
+form button:hover {
+background-color: #0062cc;
+}
+
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+line-height: 1.5;
+}
+header {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+height: 80px;
+background-color: #fff;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo {
+height: 60px;
+margin-right: 10px;
+}
+.site-title {
+font-size: 2rem;
+font-weight: 700;
+color: #333;
+}
+nav {
+background-color: #333;
+color: #fff;
+padding: 10px;
+}
+nav ul {
+display: flex;
+justify-content: space-between;
+margin: 0;
+padding: 0;
+list-style: none;
+}
+nav li {
+margin: 0 10px;
+}
+nav a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+font-size: 1rem;
+transition: all 0.2s ease-in-out;
+}
+nav a:hover {
+color: #f00;
+}
+main {
+padding: 50px;
+text-align: center;
+background-color: #f4f4f4;
+color: #333;
+box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+font-size: 3rem;
+margin-top: 0;
+}
+p {
+font-size: 1.2rem;
+margin-bottom: 0;
+}
+footer {
+background-color: #333;
+color: #fff;
+padding: 10px;
+text-align: center;
+}
+footer p {
+margin: 0;
+font-size: 0.8rem;
+}

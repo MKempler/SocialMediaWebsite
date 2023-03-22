@@ -1,17 +1,29 @@
 const express = require('express');
 const app = express();
 
-app.get('/', function(req, res) {
-  res.sendFile(__dirname + '/index.html');
-});
-
-var http = require('http');
-http.createServer(function (request, response) {
-response.writeHead(200, {
-'Content-Type': 'text/plain'
-});
-response.end('Hello World\n');
-}).listen(1337);
-console.log('Server running on port 1337!');
-
+// Serve static files from the 'client/public' directory
 app.use(express.static('client/public'));
+
+// Route for the root URL
+app.get('/', function (req, res) {
+  res.sendFile('index.html', {root: './client/views' });
+});
+
+// Route for the login URL
+app.get('/login', function (req, res) {
+  res.sendFile('login.html', {root: './client/views' });
+});
+
+// Route for the post URL
+app.get('/post', function (req, res) {
+  res.sendFile('post.html', {root: './client/views' });
+});
+
+// Route for the about URL
+app.get('/about', function (req, res) {
+  res.sendFile('about.html', {root: './client/views' });
+});
+
+// Start the server
+app.listen(1337, () => console.log('Listening on port 1337!'));
+
