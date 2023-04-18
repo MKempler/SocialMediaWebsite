@@ -1,5 +1,15 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+var path = require('path');
+
+
+// support json encoded bodies
+app.use(bodyParser.json({ type: 'application/json'}));
 
 // Serve static files from the 'client/public' directory
 app.use(express.static('client/public'));
@@ -27,3 +37,10 @@ app.get('/about', function (req, res) {
 // Start the server
 app.listen(1337, () => console.log('Listening on port 1337!'));
 
+// Include the userRoutes module
+let userRoutes = require('./route/userRoutes');
+app.use('/api/user', userRoutes);
+
+// Include the userRoutes module
+let postRoutes = require('./route/postRoutes');
+app.use('/api/post', postRoutes);
