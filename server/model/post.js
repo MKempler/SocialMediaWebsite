@@ -11,13 +11,12 @@ function createPost(title, content, author) {
   // Increments the postIdCounter
   postIdCounter++;
 
-  // Create a new post object with a unique id, title, content, author, and createdAt time
+  // Create a new post object with a unique id, title, content, author
   let post = {
     id: postIdCounter,
     title: title,
     content: content,
     author: author,
-    createdAt: new Date()
   };
 
   // Add the post to the posts array
@@ -48,7 +47,7 @@ function updatePost(postId, title, content, author) {
     return post;
   }
 
-  // If no post was found with the given id, return null
+ 
   return null;
 }
 
@@ -57,11 +56,11 @@ function deletePost(postId) {
   let index = posts.findIndex(post => post.id === postId);
 
   if (index !== -1) {
-    // Remove the post from the posts array and return it
+
     return posts.splice(index, 1)[0];
   }
 
-  // If no post was found with the given id, return null
+  
   return null;
 }
 

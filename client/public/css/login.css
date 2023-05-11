@@ -1,6 +1,4 @@
-/* post.css */
-
-/* Header */
+/* header styles */
 header {
   display: flex;
   align-items: center;
@@ -8,6 +6,7 @@ header {
   height: 80px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 .logo {
@@ -21,44 +20,67 @@ header {
   color: #333;
 }
 
-/* Main Section */
-main {
-  margin-top: 30px;
+/* user list styles */
+#user-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-h2 {
+#user-list li {
+  margin: 10px;
+}
+
+#user-list a {
+  display: block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
   text-align: center;
-  font-size: 24px;
-  color: #333;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.post-form {
+#user-list a:hover {
+  background-color: #555;
+}
+
+/* form styles */
+h1 {
+  margin-top: 30px;
+  font-size: 24px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  max-width: 400px;
-  margin: 0 auto;
 }
 
 label {
   font-size: 16px;
   margin-bottom: 10px;
-  color: #333;
+  font-family: 'Roboto', sans-serif;
 }
 
-input[type="text"] {
+input[type="email"],
+input[type="password"] {
   padding: 10px;
   font-size: 16px;
   border-radius: 4px;
   border: 1px solid #ccc;
   margin-bottom: 20px;
   width: 100%;
-}
-
-input[type="text"]:focus {
-  outline: none;
-  border: 1px solid #333;
+  max-width: 400px;
 }
 
 button[type="submit"] {
@@ -70,28 +92,25 @@ button[type="submit"] {
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Roboto', sans-serif;
 }
 
 button[type="submit"]:hover {
   background-color: #555;
 }
 
-/* Footer */
-footer {
-  margin-top: 30px;
-  background-color: #f5f5f5;
-  padding: 20px;
+/* sign-up link style */
+p {
+  font-size: 16px;
   text-align: center;
-}
-
-footer p {
-  font-size: 14px;
-  color: #666;
+  margin-top: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 
 a {
   color: #333;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
 }
 
 a:hover {

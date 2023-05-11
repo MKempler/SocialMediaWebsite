@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Feed</title>
+    <link type="text/css" rel="stylesheet" href="/CSS/feed.css"> 
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img class="logo" src="img/Panther.jpg" alt="Panther Logo">
+        </a>
+        <h1 class="site-title">Panther</h1>
+    </header>
+    <h1>Your Feed</h1>
+
+    <div id="postContainer"></div> 
+
+    <script>
+        // Make an API call to retrieve all posts
+        fetch("/api/post")
+  .then(response => response.json())
+  .then(posts => {
+    const postContainer = document.getElementById("postContainer");
+    postContainer.innerHTML = ""; 
+
+    posts.forEach(post => {
+      const postElement = document.createElement("div");
+      postElement.classList.add("post");
+      postElement.innerHTML = `
+        <h3>Title: ${post.title}</h3>
+        <p>Content: ${post.content}</p>
+        <p>Author: ${post.author}</p>
+      `;
+      postContainer.appendChild(postElement);
+    });
+  })
+  .catch(error => console.log(error));
+
+    </script>
+</body>
+</html>

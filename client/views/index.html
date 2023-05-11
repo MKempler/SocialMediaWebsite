@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Panther | Home</title>
-    <link type="text/css" rel="stylesheet" href="../public/css/index.css">
-    
+    <link type="text/css" rel="stylesheet" href="/CSS/index.css">
 </head>
 <body>
     <header>
@@ -16,50 +15,24 @@
         <ul>
             <li><a href="/post">Make a Post</a></li>
             <li><a href="/about">About</a></li>
+            <li><a href="/feed">Feed</a></li>
             <li><a href="/login">Log In / Sign Up</a></li>
         </ul>
     </nav>
+    
     <main>
         <h1>Welcome to Panther</h1>
         <p>Say what you want. When you want.</p>
     </main>
-
-    <script>
-        function toggleVisibility() {
-            const allPosts = document.querySelectorAll('.post-box');
-            for (let i = 0; i < allPosts.length; i++) {
-                if (allPosts[i].style.display === 'none') {
-                    allPosts[i].style.display = 'block';
-                } else {
-                    allPosts[i].style.display = 'none';
-                }
-            }
-        }
-
-        const button = document.querySelector('.view-all-button');
-        button.addEventListener('click', toggleVisibility);
-    </script>
     
     <footer>
         <p>&copy; 2023 Panther</p>
     </footer>
 
-    <div class="featured-posts">
-        <h2>Featured Posts</h2>
-        <div class="post-box">
-            <h3>Featured Post 1</h3>
-        </div>
-        <div class="post-box">
-            <h3>Featured Post 2</h3>
-        </div>
-        <div class="post-box">
-            <h3>Featured Post 3</h3>
-        </div>
-        <button class="view-all-button">View All Posts</button>
-    </div>
+
+    <script src="/js/index.js"></script>
+
+    
+
 </body>
 </html>
-
-
-   
-

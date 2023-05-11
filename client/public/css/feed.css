@@ -1,0 +1,69 @@
+/* Reset default browser styles */
+body, h1, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Page layout */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 80px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo {
+    height: 60px;
+    margin-right: 10px;
+}
+.site-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+}
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #postContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .post {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 400px;
+    max-width: 100%;
+  }
+  
+  .post h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .post p {
+    margin-bottom: 5px;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .post {
+      width: 90%;
+    }
+  }
+  

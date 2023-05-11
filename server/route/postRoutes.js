@@ -4,7 +4,6 @@ console.log("[postRoutes] initialized");
 // Include the postController module
 let postController = require('../controller/postController');
 
-// Require the express library
 var express = require('express');
 
 var router = express.Router();
