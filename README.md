@@ -1,12 +1,14 @@
-A: Introduction
+A: Introduction:
 Panther is a  website that lets users express themselves through posts 
 
-Key Features
+
+Key Features:
 User Registration and Login: Panther offers an easy user registration and login process, ensuring security
 
 Create Posts: Users can create engaging and personalized posts, expressing their thoughts, ideas, or experiences
 
 Feed: The feed enables users to view posts 
+
 
 B: Installation Instructions:
 
